@@ -1422,7 +1422,7 @@ ul.pagination {
       text-align: center; }
       ul.pagination li > .page.active {
         background-color: #f56a6a;
-        color: #ffffff !important; }
+        color: #F1B62C !important; }
         ul.pagination li > .page.active:hover {
           background-color: #f67878; }
         ul.pagination li > .page.active:active {
