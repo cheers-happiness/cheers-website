@@ -2217,20 +2217,17 @@ footer p:first-child {
   font-size: 1.2em;
   font-weight: bold;
   color: #F1B62C;
+  margin-bottom: 1em;
 }
 
 footer p:last-child {
   font-size: 0.9em;
-  color: #F1B62C;
+  color: #888;
 }
 
 footer a {
-  color: #888;
+  color: inherit;
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 /* Menu */
