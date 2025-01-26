@@ -2221,11 +2221,11 @@ footer p:first-child {
 
 footer p:last-child {
   font-size: 0.9em;
-  color: #888;
+  color: #F1B62C;
 }
 
 footer a {
-  color: #F1B62C;
+  color: #888;
   text-decoration: none;
 }
 
