@@ -1209,7 +1209,26 @@ input[type="radio"] + label:before {
     font-weight: 900; }
   .icon.brands:before {
     font-family: 'Font Awesome 5 Brands'; }
+/* Logo Styling */
+.logo img {
+  width: 120px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures no extra spacing around image */
+}
 
+/* Positioning in Navbar or Header */
+.logo {
+  display: flex; /* Makes it align properly in flex containers */
+  align-items: center; /* Centers it vertically */
+  text-decoration: none; /* Removes underline */
+}
+
+/* Optional: If inside a header */
+header .logo {
+  position: absolute; /* Adjust positioning */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+}
 /* Image */
 .image {
   border-radius: 0.375em;
