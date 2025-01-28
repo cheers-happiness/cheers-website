@@ -1211,8 +1211,8 @@ input[type="radio"] + label:before {
     font-family: 'Font Awesome 5 Brands'; }
 /* Logo Styling */
 .logo img {
-  width: 120px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 80px; /* Adjust size as needed */
+  height: 70px; /* Maintain aspect ratio */
   display: block; /* Ensures no extra spacing around image */
 }
 
