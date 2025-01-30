@@ -6,7 +6,9 @@
 -->
 <html>
 	<head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@700&display=swap" rel="stylesheet">
 		<title>cheers.</title>
+        <link rel="icon" href="images/Logo1.png" type="image/png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -59,37 +61,52 @@
                                     <h2>Key Features</h2>
                                     <div class="features-grid">
                                         <div class="feature">
-                                        <h3>Join a Cheering,</h3>
-                                        <p>have a moment of happiness.</p>
+                                        <h3>Join a Cheering</h3>
+                                        <p>Your moment of happiness is just two clicks away.<br>
+                                        Join a Cheering near you now!</p>
                                         <img src="images/JoinCheerinng.png" alt="Feature 1">
                                         </div>
                                         <div class="feature">
-                                        <h3>Create a Cheering,</h3>
-                                        <p>create a moment of happiness for yourself and others.</p>
+                                        <h3>Create a Cheering</h3>
+                                        <p>Be the reason behind someone's moment of happiness by hosting a Cheering.</p>
                                         <img src="images/CheeringCreation.png" alt="Feature 2">
                                         </div>
                                         <div class="feature">
-                                        <h3>Browse Memories,</h3>
-                                        <p>relive the moment of happiness from past Cheerings.</p>
-                                        <img src="images/feature3.png" alt="Feature 3">
+                                        <h3>Browse Memories</h3>
+                                        <p>Your moments of happiness are right at your fingertips! Relive them through our interactive memory feature.</p>
+                                        <img src ="images/MemoryView.png" alt="Feature 3"> 
                                         </div>
-                                    </div>
+                                        </div>
                                     </div>
                                 </section>
                             <!-- Download Section -->
-                                <section id="download">
-                                    <div class="container">
-                                    <h2>Get it Now.</h2>
-                                    <p>The app is completely free <br> and available for iOS.</p>
-                                
-                                    <!-- App Store Button -->
-                                    <div class="download-button">
-                                        <a class="app-store">
-                                        <img src="images/apple-download.png" alt="Download on the App Store">
+                            <section id="download">
+                                <div class="container">
+                                  <h2>Now Available</h2>                              
+                                  <!-- Download Content -->
+                                  <div class="download-content">
+                                    <!-- Left Side (Logo and App Store) -->
+                                    <div class="left-side">
+                                      <div class="logo-dl">
+                                        <img src="images/Cheers Logo.png" alt="Logo"> <!-- Replace with your logo -->
+                                      </div>
+                                      <div class="app-store">
+                                        <a href="#" class="app-store-link">
+                                          <img src="images/apple-download.png" alt="Download on the App Store">
                                         </a>
+                                      </div>
                                     </div>
+                              
+                                    <!-- Right Side (Text) -->
+                                    <div class="right-side">
+                                      <p>Life's best moments are meant to be shared. <br>
+                                        Download the cheers. App to experience these moments and create genuine connections. <br>
+                                        Available now for iOS.
+                                    </p>
                                     </div>
-                                </section>
+                                  </div>
+                                </div>
+                              </section>
 <!-- 
 							
 								<section>
@@ -298,5 +315,29 @@
                                         Licensed under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
                                     </p>
                                 </footer>
+                                <script>
+                                    // Select all anchor links
+                                    const links = document.querySelectorAll('a[href^="#"]');
+                                    
+                                    // Loop through each link
+                                    links.forEach(link => {
+                                      link.addEventListener('click', function (e) {
+                                        e.preventDefault(); // Prevent default anchor link action
+                                        
+                                        // Get the target element from the href attribute
+                                        const targetId = this.getAttribute('href');
+                                        const targetElement = document.querySelector(targetId);
+                                        
+                                        // Scroll to the target element with smooth scroll
+                                        targetElement.scrollIntoView({
+                                          behavior: 'smooth',
+                                          block: 'start'
+                                        });
+                                  
+                                        // Update the URL to reflect the target section
+                                        window.history.pushState(null, '', targetId);
+                                      });
+                                    });
+                                  </script>
 	</body>
 </html>

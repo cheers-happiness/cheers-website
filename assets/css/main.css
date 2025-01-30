@@ -43,6 +43,14 @@ a:focus, a:hover {
   border-bottom: none !important;
   outline: none !important;
 }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, .bold-text {
+  font-weight: 700; /* Ensure Bold font is applied */
+}
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1247,7 +1255,11 @@ input[type="radio"] + label:before {
     font-weight: 900; }
   .icon.brands:before {
     font-family: 'Font Awesome 5 Brands'; }
-
+.logo-dl img {
+  width: 250px; /* Adjust size as needed */
+  height: 250px; /* Maintain aspect ratio */
+  display: block; /* Ensures no extra spacing around image */
+}
 /* Logo Styling */
 .logo img {
   width: 80px; /* Adjust size as needed */
@@ -2269,7 +2281,7 @@ button:disabled,
 }
 
 .feature img {
-  max-width: 250px;
+  width: 250px;
   margin-bottom: 1em;
 }
 
@@ -2301,39 +2313,71 @@ button:disabled,
 
 /* Download Section */
 #download {
-  background-color: #F1B62C; /* Dark background */
-  color: #F1B62C; /* Mustard yellow text */
-  text-align: center;
-  padding: 6em 2em;
+  background-color: #F1B62C; /* Yellow background */
+  color: #1C1C1C; /* Dark text color */
+  text-align: center; /* Center text for the header and sections */
+  padding: 6em 2em; /* Padding for spacing */
 }
 
-/* Title */
+/* Section Title */
 #download h2 {
-  font-size: 2.8em;
+  font-size: 3em;
   font-weight: bold;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  color: #1C1C1C; /* Dark text color */
+  text-align: center; /* Center the header */
 }
 
 /* Subtitle */
 #download p {
   font-size: 1.4em;
-  color: #CCC; /* Light grey text */
+  color: #1C1C1C; /* Dark text color */
   margin-bottom: 2em;
+  line-height: 1.6;
+  text-align: center; /* Center the paragraph */
 }
 
-/* App Store Button */
-.download-button {
+/* Download Content - Flexbox to align items */
+.download-content {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the content */
+  align-items: center;
+  gap: 3em; /* Space between left and right sections */
+  margin-top: 2em;
+  flex-wrap: wrap; /* Wraps content if necessary */
 }
 
-.download-button a img {
-  width: 200px; /* Adjust size */
+/* Left Side - Logo and App Store Button */
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the logo and app store button */
+  gap: 1.5em;
+}
+
+/* Logo Image */
+.left-side .logo img {
+  max-width: 200px; /* Set max width to control logo size */
+  height: auto; /* Ensure aspect ratio is preserved */
+  display: block; /* Remove any inline-block or unwanted spacing */
+}
+
+/* App Store Image */
+.left-side .app-store img {
+  width: 200px; /* Adjust App Store button size */
   transition: transform 0.3s ease-in-out;
 }
 
-.download-button a img:hover {
-  transform: scale(1.1);
+.left-side .app-store img:hover {
+  transform: scale(1.1); /* App store button hover effect */
+}
+
+/* Right Side - Text */
+.right-side {
+  max-width: 600px; /* Limit text width */
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: left; /* Left-align the right side text */
 }
 
 /* Responsive Design */
@@ -2343,15 +2387,34 @@ button:disabled,
   }
 
   #download h2 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   #download p {
     font-size: 1.2em;
   }
 
-  .download-button a img {
-    width: 180px;
+  /* Stack elements vertically on smaller screens */
+  .download-content {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .left-side {
+    align-items: center; /* Ensure left side content is centered */
+  }
+
+  .right-side {
+    text-align: left; /* Keep text left-aligned */
+    max-width: 100%;
+  }
+
+  .left-side .logo img {
+    max-width: 120px; /* Adjust logo size for smaller screens */
+  }
+
+  .left-side .app-store img {
+    width: 180px; /* Adjust App Store button size for smaller screens */
   }
 }
 
@@ -2387,4 +2450,8 @@ footer p:last-child {
 footer a {
   color: inherit;
   text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
